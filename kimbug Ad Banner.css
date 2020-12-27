@@ -21,7 +21,7 @@
     margin: 0 auto;
     background-color: #1f2d3d;
   }
-  
+
   body::after {
     content: "kimbug©";
     display: block;
@@ -41,7 +41,7 @@
     transition: box-shadow 250ms ease-in, transform 250ms ease-in;
   }
   
-  .modal:hover {
+.modal:hover {
     transform: translateY(-1px);
     box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
   }
