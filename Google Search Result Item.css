@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 550px;
+    padding: 30px;
+}
+
+#title {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#address {
+    text-decoration: none;
+    font-size: 15px;
+    color: green;
+}

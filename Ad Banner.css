@@ -32,6 +32,7 @@ body::after {
     border-radius: 10px;
     flex-grow: 0;
     flex-shrink: 0;
+    transition: box-shadow 250ms ease-in, transform 250ms ease-in;
 }
 
 .title {
@@ -49,22 +50,26 @@ body::after {
     letter-spacing: 0.01em;
 }
 
-button {
-    background: linear-gradient(90deg, #ff8806 0%, #fb07f3 100%);
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, #ff8806 0%, #f72ff0 100%);
     min-width: 320px;
     height: 60px;
-    border: none;
-    border-radius: 5px;
     bottom: 30px;
+    border-radius: 5px;
+    color: white;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.01em;
-    color: white;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
-/* button:hover {
-    background: rgb(250, 0, 237);
-    transition: 
-    transition-duration: 1s;
-} */
+a:hover {
+    transform: translate(5px, -5px);
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.5);
+    background: #f72ff0;
+}
 
