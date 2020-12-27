@@ -1,0 +1,48 @@
+.banner-wrapper {
+    background-color: white;
+    width: 80vw;
+    max-width: 300px;
+    min-width: 256px;
+    height: 240px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.title {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    margin: 12% 10% 0 10%;
+}
+
+.desc {
+    position: absolute;
+    width: 80%;
+    height: auto;
+    margin: 120px 10% 0 10%;
+    font-size: 10px;
+}
+
+button {
+    background: linear-gradient(to right, orange, rgb(250, 0, 237) 80%);
+    position: absolute;
+    width: 80%;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    bottom: 30px;
+    margin: 0 10%;
+    color: white;
+}
+
+button:hover {
+    background: rgb(250, 0, 237);
+    transition: 1s;
+    transition-duration: 1s;
+}
+
+.copyright {
+    margin-top: 100px; 
+    color: white;
+}

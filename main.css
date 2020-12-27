@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1f2d3d;
+}
+
+body {
+    background-color: #1f2d3d;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.copyright {
+    display: absolute;
+    text-align: center;
+    bottom: 10vw;
+}
