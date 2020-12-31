@@ -1,0 +1,41 @@
+body {
+    background-color: #1f2d3d;
+}
+
+.product-card {
+    background-color: white;
+    padding: 30px 60px 40px 60px;
+    border-radius: 10px;
+    position: relative;
+}
+
+img {
+    margin-bottom: 24px;
+}
+
+
+
+.product-card-title {
+
+}
+
+.author {
+    text-align: center;
+    color: #1f2d3d;
+    font-weight: bold;
+    position: absolute;
+    top:274px;
+    left: 113px;
+}
+
+.product-card-prize {
+    display: inline-block;
+    background-color: blue;
+    border-radius: 5px;
+    padding: 2px 4px;
+    color: white;
+}
+
+.star {
+    margin-left: 10px;
+}

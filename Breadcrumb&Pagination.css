@@ -1,36 +1,62 @@
-.Breadcrumb a {
-    text-decoration: none;
-    color: rgb(10, 81, 163);
+body {
+    background-color: rgb(255, 255, 255);
 }
 
-.Pagination {
+.Breadcrumb {
+    margin-bottom: 50px;
     display: flex;
-}
-.Pagination a {
-    text-decoration: none;
-    color: rgb(10, 81, 163);   
-}
-
-.NumPageList {
-    display: flex;
-    flex-shrink: 0;
-    list-style: none;
-    text-decoration: none;
-    color: rgb(10, 81, 163);
-}
-
-li:active {
-    background-color: rgb(10, 81, 163);
-    color: white;
-
-}
-
-.NumPageList li {
-    width: 30px;
-    height: 30px;    
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 2px;
-    display: flex;
-    justify-content: center;
     align-items: center;
+}
+
+.Breadcrumb::before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin-right: 4px;
+    background-color: transparent;
+    background-position: center center;
+    background-size: contain;
+    background-image: url("./assets/icon-repository.svg");
+    background-repeat: no-repeat;
+}
+
+.Breadcrumb a:nth-child(1):after{
+    content: "/";
+    color: #586069;
+    padding: 0 4px 0 6px;
+}
+
+a {
+    text-decoration: none;
+    color: #0366D6;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.Breadcrumb a {
+    font-size: 16px;
+    font-weight: 550;
+}
+
+.PageNum {
+    list-style: none;
+    display: flex;
+}
+
+.PageNum li {
+    flex-shrink: 0;
+    padding: 5px 12px;
+    border: 0.3px solid rgba(0, 0, 0, 0.2)
+}
+
+.current-page {
+    color: #d1d5da;
+}
+
+button {
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    text-align: center;
 }
