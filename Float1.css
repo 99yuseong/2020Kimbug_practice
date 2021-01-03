@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    color: #8492A6;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    min-width: 540px;
+    background-color: #E5E5E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+}
+
+.TabNav {
+    width: 540px;
+    height: 54px;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+
+.TabNav:before {
+    content: "TabNav";
+    position: absolute;
+    font-size: 10px;
+    top: -18px;
+    left: 6px;
+    letter-spacing: 0.02em;
+}
+
+.TabNav::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.menu {
+    float: left;
+    padding: 16px 20px;
+    margin-right: 16px;
+}
+
+.menu:hover {
+    border-bottom: 2px solid #2860E1;
+    color: #2860E1;
+}
