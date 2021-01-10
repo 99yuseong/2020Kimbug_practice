@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E5E5E5;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.Tabnav {
+    min-width: 540px;
+    height: 54px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #E5EAEF;
+    margin: 20px;
+}
+
+.Tabnav a {
+    color: #8492A6;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    display: inline-block;
+    padding: 16px 20px;
+    margin-right: 16px; 
+    text-decoration: none;
+}
+
+.nav-effect:hover {
+    font-weight: 500;
+    color:#2860E1;
+    border-bottom: 2px solid #2860E1;
+}
+
+.nav-effect:active {
+    font-weight: 500;
+    color:#2860E1;
+    border-bottom: 2px solid #2860E1;
+}
+
+.mail {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #ffffff;
+    margin: 20px;
+}
+
+img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 20px 20px 56px;
+}
+
+.mail-content {
+    margin-right: 20px; 
+}
+
+.mail-content h1 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    margin-bottom: 4px;
+    color: #1F2D3D;
+}
+
+.mail-content strong {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    color: #AFB3B9;
+}
+
+.mail-content p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    color: #79818B;
+}
