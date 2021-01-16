@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('./assets/fonts/Noto_Sans_KR/NotoSansKR-Black'); /* IE9 Compat Modes */
+    src: url('./assets/fonts/Noto_Sans_KR/NotoSansKR-Black?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./assets/fonts/Noto_Sans_KR/NotoSansKR-Black.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./assets/fonts/Noto_Sans_KR/NotoSansKR-Black.woff') format('woff'), /* Pretty Modern Browsers */
+         url('./assets/fonts/Noto_Sans_KR/NotoSansKR-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('./assets/fonts/Noto_Sans_KR/NotoSansKR-Black.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'MyFont';
+    src: url('./assets/fonts/Noto_Sans_KR/NotoSansKR-Bold'); /* IE9 Compat Modes */
+    src: url('./assets/fonts/Noto_Sans_KR/NotoSansKR-Bold?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./assets/fonts/Noto_Sans_KR/NotoSansKR-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./assets/fonts/Noto_Sans_KR/NotoSansKR-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+         url('./assets/fonts/Noto_Sans_KR/NotoSansKR-Bold.ttf')  format('truetype'), /* Safari, Android, iOS */
+         url('./assets/fonts/Noto_Sans_KR/NotoSansKR-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+
+
+SF Pro Text
+SF Pro Display
+
+SpoqaHanSans
