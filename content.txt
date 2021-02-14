@@ -1,0 +1,647 @@
+html 강의
+
+<a href="주소">링크</a>
+    hypertext reference
+        > 웹 url
+        > 페이지 내 이동 / id 이용해서 이동
+        > 메일 주소 mailto:메일주소
+        > 전화번호 tel:전화번호
+    target="_blank"
+        > 원래 페이지 이동 > _self 기본값
+        > 새로운 탭으로 이동 > _blank
+
+<img src="" alt="">
+    > source
+        > 절대 경로 > 이미지 주소
+        > 상대 경로 > 폴더 안의 사진 이미지
+    > alternative text
+        대체 텍스트 > 이미지가 안뜰 때 보여주게 되는 대체 텍스트
+
+<dl>
+    <dt>이름</dt>
+    <dd>김버그</dd>
+</dl>
+    > description list
+        > div dt dd 만 자식요소로 사용할 수 있음
+        > 용어를 정의할 때
+            > definition <dfn></dfn>
+        > key-value 형태로 값을 제공할 때 {key: value}
+            > description term
+                > key 값에 해당
+            > description data
+                > value에 해당
+
+<form action="API 주소" method=" get | post "></form>
+    > action 처리해 줄 logic이 있는 주소를 작성
+    > method get > 평상시 / post > 정보 양 많을 때 
+
+<input type="text" placeholder="" maxlength="" minlength="" required disabled value="">
+    > type 
+        > text > 한 줄 정도 분량의 텍스트
+        > email > @ 사용해야함
+        > password > 안보이는 기호로 변환되서 입력
+        > url
+        > number > 우측에 눌러서 올릴 수 있는 버튼 있음
+                 > max="" min="" 최대최소 사용가능
+        > tel
+        > file > choose file 버튼 생김
+               > accpet=".png,.jpg" > 파일 양식 제한 가능
+        > radio > 1개만 선택 가능한 버튼
+                > name=""
+                    > 같은 이름을 가진 input이 연관되어 있음을 표현
+                > value=""
+                > submit시 서버에 name=value의 양식으로 전달됨, 여러 선택 시 &로 묶여서 전달    
+        > checkbox > 여러개를 선택 가능한 버튼
+
+    > placeholder
+        > 기본적으로 input안에 보여줄 텍스트
+    > maxlength/minlength
+        > 텍스트의 숫자를 제한
+    > required
+        > 필수 입력사항
+    > disabled
+        > 입력 불가
+    > value
+        > 입력된 값
+    > label
+        특정 input의 이름을 칭함
+        <label for="인풋id"></label>
+    > select / option
+        <select name="" id="" multiple>
+            <option value=""></option>
+            <option value=""></option>
+            <option value=""></option>
+        </select>
+            > multiple 여러개 선택 가능
+    > textarea
+        > 많은 내용을 입력할 때 사용
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+            > cols 세로로 30자 쓸 수 있음
+            > rows 가로로 10자 쓸 수 있음
+    > button
+        <button type=""></button>
+            > button 
+            > submit > form을 제출하는 용도 
+            > reset > form을 다시 쓰고 싶을 때
+    
+<table>
+    <tr>
+        <th>테이블 헤더</th>
+        <td>테이블 데이터</td>
+    </tr>
+</table>
+    > tr: table row > 줄하나 만들어서 안에 헤더나 데이터를 넣으면 됨
+    > th: table header
+    > td: table data
+    > 구조화를 위해 사용해주면 좋음
+        <thead></thead>
+        <tbody></tbody>
+        <tfoot></tfoot>
+    > 속성
+        rowspan="2" > 두 개의 row에 걸쳐 데이터를 묶어서 나타내라 
+        colspan="6" > 한 줄에서 6개의 column에 걸쳐 데이터를 묶어서 나타내라
+        scope="row | col" > table header가 세로 줄인지 가로 줄인지 table header에만 사용할 수 있음
+
+media file
+<img src="" alt="">
+<audio src=""></audio>
+    > 다른 형식으로도 작성가능
+        <audio>
+            <source src="" type="">
+        </audio>
+
+    > 속성
+        controls 오디오 컨트롤 바 생성
+        autoplay 자동재생
+        loop 반복
+        type > 양식 검색하세요
+<video src=""></video>
+    > 다른 형식으로도 작성가능
+        <video>
+            <source src="" type="">
+            <source src="" type="">
+            <p> 브라우저 없데이트 좀 하실?</p>
+        </video>
+            > 적힌 순서대로 되는 걸 재생하다가 재생안되면...     
+<iframe></iframe>
+    > 또다른 html이나 파일을 나타내기 위해 사용
+
+<abbr title="풀네임">약어</abbr>
+    > 약어에 대한 설명을 나타내기 위해 사용
+    > 마우스 올리면 설명 들어가짐
+<address>연락처</address>
+<pre></pre>
+    > pre formatted
+    > 적힌 그대로 출력
+<code></code>
+    > pre 태그 안에 코드를 입력하기 위해 사용
+
+
+css 강의
+
+selector(선택자) {
+    property(속성): value(값); >>>>declarative(선언부) 
+}
+
+Type selector
+    지칭하는 선택자.
+    html tag들을 바로 입력할 수 있음.
+    중괄호 앞에 쓰는 녀석들.
+
+    a {
+
+    }
+
+Class selector
+    html에 선언한 class를 지칭하는 선택자.
+    단 한번의 선언으로 여러 요소에 디자인을 줄 수 있음.
+    한 요소에 여러 개의 클래스를 가질 수 있음.
+
+    .class {
+
+    }
+
+ID selector
+    단 한 개만 존재하는 선택자.
+
+    #IdSelector {
+
+    }
+
+*다중으로 선택자를 사용하는 경우
+    a.class#IdSelector {
+    중간에 공백없이 나온다면 <a></a> & class & Idselector인 1개의 요소를 가르키게 됨.
+    (공백이 있으면 아무 변화 없음)
+    별개의 요소에 속성을 주고 싶다면 중간에 콤마를 써야함
+}
+Child Combinators(자식선택자)
+    parent > child {
+
+    }
+Descendant Combinators(자손선택자)
+    parent descendant {
+        parent 안에 있는 녀석들을 지칭.
+        꼭 자손만이 아니라 자식들도 될 수 있음.
+        공백이 있어야함.
+    }
+Sibling Combinators(형제선택자s)
+    selector + Sibling {
+        selector 다음으로 나오는 형제 Sibling 요소 1개만 적용.
+    }
+    selector ~ Sibling {
+        selector 다음으로 나오는 형제 Sibling 요소들 모두 적용.
+    }
+Structural Pseudo-classes(구조적가상클래스선택자)
+    element:first-child {
+        element들 중 첫번째 녀석에게 적용됨.
+        공백 없어야함.
+    }
+    element:last-child {
+        element들 중 마지막 녀석에게 적용됨.
+    }
+    element:nth-child() {
+        element들 중 n번째 녀석에게 적용됨.
+        짝수 2n, 홀수 2n-1 등으로 표현 가능.
+    }
+User Action Pseudo-classes(동적가상클래스선택자)
+    element:hover {
+        마우스를 위에 올리면 적용할 속성.
+    }
+    element:focus {
+        마우스를 클릭하거나 탭 키를 누른 후에 적용할 속성.
+        focus 된 요소를 focus가 바뀌기 전까지 적용됨.
+        input 태그에서 값을 입력할 때 사용할 수 있음.
+    }
+    element:active {
+        마우스로 클릭한 동안(클릭하는 순간부터 떼는 순간까지)에 적용할 속성.
+    }
+    #추가 개념(이건 동적가상클래스선택자인지는 모르겠음)
+        a:link {
+            방문 전 링크에 적용할 속성.
+        }
+        a:visited {
+            방문 후 링크에 적용할 속성.
+        }
+선택자 우선순위
+    스타일이 적용이 안되면 가장 먼저 확인해봐야 할 값.
+    기본적으로 나중에 선언된 값들이 이전의 값들을 덮어버림.
+        1st ID
+        2nd class Pseudo-class
+        3rd Type selector
+    
+    #rule breaker
+        inline style은 다른 값들을 모두 무시하고 적용됨.
+        element: value !important; 싹다 무시하고 적용됨.
+
+
+box 모델
+    html 코드가 브라우져에 렌더가 될 때 box모델로 나타나게 됨.
+    즉 html 모든 요소들이 일정한 모델인 box모델로 표현됨.
+        
+        content
+            width 가로.
+            height 세로.
+        
+        padding
+            안쪽 여백.
+            content와 border 사이의 공간을 나타냄.
+        
+        border
+            테두리
+            border: 1px(굵기) solid(스타일) #000(색상); > 순서는 바뀌어도 상관없음.
+                스타일 > solid dashed dotted
+            border: none; 테두리 없애기
+            border-radius:0px; > 테두리가 동글동글해짐.
+                50% 원
+                원하는 부분쪽만 바꾸고 싶을때
+                    border-bottom-left-radius
+                    border-top-radius
+
+        margin
+            바깥쪽 여백. 요소와 요소 사이의 여백
+
+        속기형 Shorthand
+            시계방향으로 적용되고, 
+            만약 정의가 안되어 있다면 각각의 (상 <-> 하) (좌 <-> 우) 값으로 대체됨
+            padding: 전체;
+            padding: 상하 좌우; >
+            padding: 상 우 하 좌;
+            margin: 전체;
+            margin: 상하 좌우;
+            margin: 상 우 하 좌;
+                       
+box-sizing
+    기본은 모두 content-box로 설정되어 있음
+        가로 세로 길이를 선언 할때, comtent bod 만의 값으로 설정됨
+    box-sizing: border-box;
+        사이즈를 잡을 때 border-box 기준으로 잡겠다고 설정
+        border이나 padding을 쓰면 자동으로 content box와 border이 계산되서 줄어들게 됨
+
+        * {
+            box-sizing: border-box;
+        }
+         
+        box-sizing은 상속되는 값이 아니므로 전체 선택자에게 지정할 수 있는 *를 이용한다
+
+# 스타일 상속과 적용 우선순위 참고 사이트
+    https://poiemaweb.com/css3-inheritance-cascading
+
+Box Type > display
+    박스의 유형에 따라 적용되는 box모델이 달라짐
+    모든 박스들은 각각의 display 값이 설정되어 있음
+
+    display: block;
+        영역을 차지해서 다른 요소들을 막는 성질이 있음.
+        따로 width를 설정하지 않은 경우 width = 부모 content-box의 100%
+        따로 width를 선언한 경우, 남은 공간은 margin으로 자동으로 채움
+            > 개발자 코드에서는 따로 값이 나타나지는 않음
+        * margin: 0 auto;
+            > 자동으로 생기는 margin을 좌우로 줘버리겠다는 의미
+        width, height, padding, border, margin 모두 사용가능
+        따로 부모의 height를 선언하지 않을 경우 자식요소의 height의 합 = 부모의 height
+
+        <div>
+
+    display: inline;
+        수평상으로 줄줄이 box들을 나열
+        부모의 width가 넘어버리면 자동으로 줄바꿈
+        content를 옆으로 흐르게 하기 위한 성질
+        width, height, "padding, border, margin" 각각의 top, bottom 사용 불가
+                        > 에러가 안뜨는데 쓰지 말아야할 방법들
+                        > padding-top/bottom 사용하게 되면 주변을 덮게 됨
+                        > margin-top/bottom 사용하게 되면 아무 일도 없음
+        <span>
+        <a>
+        <strong>
+    
+    display: inline-block;
+        inline의 성질을 가지면서 block처럼 영역을 차지할 수 있음 
+        > width, height, padding, margin top, bottom을 모두 사용할 수 있음
+
+    display: flex;
+
+///////////////////////////////////////////////////
+
+float
+    block요소들의 가로배치 + 레이아웃 엉망진창
+    float: left; > 가능한 최대한 왼쪽에 배치
+    float: right; > 가능한 최대한 오른쪽에 배치
+
+    부모요소가 float가 적용된 자식요소를 인식하지 못함
+    + 주변 block요소들이 float적용된 요소를 없는 것으로 취급
+    + 주변 inline요소들은 float적용된 요소를 인식하고 피해감
+
+    inline,inline-block 요소들을 block으로 변환
+    > but width 정해주지 않으면 content 만큼의 길이를 가지고
+    > width를 정해주더라도 생기는 margin auto가 생기지 않음
+
+    overflow:hidden;
+
+    clearfix
+        clear란 속성은 float으로 인해 망가진 레이아웃을 고치기 위해 만들어진 속성
+        float된 요소의 위치를 부모요소에게 알려주기 위해 다른 자식에 clear값을 사용하면
+        부모가 이를 인식할 수 있음
+        다만 아무 의미 없는 내용을 태그로 나타내면 좋지 않으므로 
+        가상선택자를 이용해 clear를 먹여주면 됨
+        clear 속성은 display: block인 요소에만 사용할 수 있음
+            a:before {
+                content: "";
+            }
+
+            b:after {
+                content: "";
+            }
+            > 가상선택자는 기본적으로 display: inline;
+        
+        .parent:after {
+            content:"";
+            display:block;
+            clear:left;
+            /* left | right | both */
+        }
+
+        clear:left;
+        clear:right;
+        clear:both;
+
+position
+    요소를 원하는 위치에 위치시키기 위해 사용하는 속성
+
+type
+    static 
+        모든 요소의 기본 position 값
+
+    
+    relative
+        이동의 기준점 > 본인이 원래 있던 자리
+        top: 0;, left: 0;
+        이동하더라도 레이아웃에 영향 X
+
+    absolute
+        display block으로 변환
+        길막을 못하는 block
+        부모가 자식요소를 인식하지 못함
+        주변 레이아웃이 인식하지 못하고 덮여짐
+        부모의 부모 순으로 올라가면서 position이 static이 아닌 값을 기준으로 정렬
+        > position: relative 가 가장 무난
+
+    fixed
+        viewport 기준으로 정렬
+        absolute와 유사하나 기준점이 다름
+            display block으로 변환
+            길막을 못하는 block
+            부모가 자식요소를 인식하지 못함
+            주변 레이아웃이 인식하지 못하고 덮여짐
+
+    sticky (지원하는 곳이 아직 많지 않음)
+
+    top, bottom, left, right
+
+flexbox
+    display:flex;
+    /* display: inline-flex; */
+    정렬하려는 요소들의 부모에게 적용해야함
+    flex 먹이면 요소들이 inlien-block느낌의 block으로 변환
+    flex 먹이려면 부모요소의 width height가 정해져 있어야함. 
+    > 그 안에서 flex배치되기 때문에 설정안해주면 변화 없거나 이상할 수 있음
+
+    flex-direction: row(column|-reverse);
+    보이지 않는 두 축이 생김
+    direction 값에 따라 축의 방향이 달라짐
+    Main axis
+        direction 방향으로 생김
+        > justify-content 이용해서 정렬
+            > :flex-start; 시작점에 정렬 (reverse도 시작점에서)
+            > :flex-end; 끝점에 정렬
+            > :center; 가운데
+            > :space-between; 사이 간격 같게
+            > :space-around; 주변 공간이 감싸듯이 간격 줌
+    Cross axis
+        direction 방향 수직으로 생김
+        선 align-items, 후 align-content 쓰면 왠만해서는 해결된다? (wrap일때)  
+        > align-items/align-content 이용해서 정렬
+                >> align-items > 축을 기준으로 해서 정렬할 요소들을 찾음
+                               > flex-wrap:wrap;이면 줄이 넘어가면서 여러 축들이 생기는 데,
+                                 그 축들로 인해 구분된 공간안에서 요소들이 정렬되게 됨
+                                 > 각 요소마다 cross axis 가 생기므로 space-between/ space-around 같은 속성을 쓸 수가 없음
+                >> align-content > flex가 선언된 부모요소 안의 요소들을 정렬하게 됨
+                                 > cross axis 방향으로 여러 요소가 있다면 space-between/ space-around 사용가능
+            > :flex-start; 시작점에 정렬 (reverse도 시작점에서)
+            > :flex-end; 끝점에 정렬
+            > :center; 가운데
+    flex-wrap > 한 줄안에 정렬? 여러줄로 정렬?
+    flex-wrap: nowrap(감싸지 않고 자식의 사이즈를 줄여서라도 한 줄로 정렬)
+    flex-wrap: wrap (한줄에 모두 정렬하기에 공간이 넉넉치 않으면 여러줄로 만들어 버림)
+                    > 사용하는 순간 축이 더 생기게 됨 
+                    즉, 줄이 넘어가게 되면 넘어간 축을 기준으로 정확히 절반으로 공간이 나눠져서 배치된다는 내용
+    order: 1; 순서 바꿀 수 있음
+
+Media Query
+    reponsive web(반응형 웹)을 만들기 위해 필요함
+    > 접속한 브라우저의 크기에 반응해 사이즈를 조절하는 것
+
+    각각 선언되야함
+        html > viewport meta
+                >>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"> 반응형 웹 정상적으로 작동함
+        css > media query
+                >>
+                @media screen and (min-width: 768px) {
+                    
+                }
+                    * vh, vw > viewport height, viewport width
+                > 조건
+                    (min-width: 768px;) and (max-width: 991px;)
+
+Typography
+    essentials
+        font-size
+            px 절대 단위 
+            em / rem 상대 단위
+                >  em : 해당 선택자에서 적용된 사이즈를 1em으로 사용
+                > rem : html파일에 적용된 폰트 사이즈를 1rem으로 사용
+        line-height
+            px / em (주로 사용, 단위 생략) / rem
+                line-height : 10px;
+                line-height : 1.5;
+                line-height : 1rem;
+            먹이면 글자는 중간에 배치됨 > 세로 방향으로 뭔갈 할 때 유의
+        letter-spacing
+            px / em (주로 사용)
+                letter-spacing : -0.01em;
+        font-family
+            > 맨 앞꺼 최대한 쓰고 없으면 다음꺼 없으면 san-serif 중 아무거나
+            font-family : "Poppins";
+            font-family : "Poppins", san-serif ;
+            font-family : "Poppins", "Roboto", san-serif ;
+                * serif 삐침이 있는 서체 / san-serif 굵기가 일정한 서체
+        font-weight
+            100 / 200 / 300 / 400 / 500 / 600 / 700 / 800 / 900
+            100단위로 존재
+            400 : normal
+            700 : bold
+        color
+            hex : #000000;
+            rgb : rgb(0, 0, 0);
+            rgba : rgba(0, 0, 0, 0.1); > 0.1만큼의 투명도 > 0 ~ 1사이의 값
+    
+    minor
+        text-align
+            center / right / left
+        text-indent
+            들여쓰기
+            > text-indent : 100px;
+        text-transform
+            none / capitalize (단어 앞글자 대문자)/ uppercase (전체 대문자) / lowercase (전체 소문자)
+        text-decoration
+            > 주로 a 태그의 밑줄 없애기 위해 사용
+            none / underline (밑줄)/ line-through (글자 자체에 줄)/ overline (글자 위에 줄)
+        font-style
+            > 주로 <em></em>에서 기본 정의된 italic 값을 없애기 위해 사용
+            normal / italic / oblique 
+
+    webfont
+        1. 갖다 쓴다
+            font.google.com에서 마음에 드는 폰트 선택
+            html <head>에 link 추가하고
+            css에서 font-family 정의
+        2. 직접 제공 (파일 자체를 제공)
+            원하는 폰트를 다운받아 파일 안에 저장
+            font.css를 따로 만들어서 html <head>의 link를 걸어주거나 css 파일에서 @import url(./font.css); 선언
+            
+            https://css-tricks.com/snippets/css/using-font-face/ 접속 링크 복사
+            원하는 폰트마다 적용할 url값과 브라우저에 따른 폰트 확장자 설정
+            > 원하는 폰트 이름을 설정할 수 있음
+            ex > Poppins 폰트를 MyWebFont라는 이름으로 사용하기 위해 저장
+            @font-face {
+                font-family: 'MyWebFont';
+                src: url('여기에 폰트 위치 ex Poppins.eot'); /* IE9 Compat Modes */
+                src: url('여기에 폰트 위치 ex Poppins.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                     url('여기에 폰트 위치 ex Poppins.woff2') format('woff2'), /* Super Modern Browsers */
+                     url('여기에 폰트 위치 ex Poppins.woff') format('woff'), /* Pretty Modern Browsers */
+                     url('여기에 폰트 위치 ex Poppins.ttf')  format('truetype'), /* Safari, Android, iOS */
+                     url('여기에 폰트 위치 ex Poppins.svg#svgFontName') format('svg'); /* Legacy iOS */
+            }
+
+
+Background
+    background-color
+        > hex / rgb / rgba
+    background-image
+        > url() > 이미지 주소 복사로 긁어 오거나 다운받아서 링크 연결. 확장자 조심!
+        > https://unsplash.com/ 무료 사진 사이트
+        > background-repeat
+            > repeat / no-repeat > background-image의 반복 개념
+        > background-size
+            > contain (사진이 박스안으로 다 들어간 상태)
+            > cover (사진의 일부가 박스로 잘리면서 들어가는 상태)
+            > custom (알아서 조절)
+        > background-position
+            > x y
+            > center center이 가장 많이 쓰임
+
+Transition
+    > 속성의 값의 변환
+    property / duration / timing-fuction / delay
+    ex > transition : font-size 2500ms;
+       > transition : font-size 2500ms ease-in, background-color 2500ms ease-in-out;
+        > property
+            > 원하는 속성에 줄 수 있음 / all 이면 모두 가능
+        > duration
+            > s ms > 1,000ms = 1s
+        > timing-fuction
+            > 변화 속도 지정
+            > ease-in (처음 천천히 나중에 빨리)
+            / ease-out (처음 빨리 나중에 천천히)
+            / ease-in-out (짬뽕)
+            / cubic-bezier (속도를 제어하고 싶을때)
+            https://cubic-bezier.com/#.17,.67,.83,.67
+        > delay
+
+animation
+    > animation을 주고 싶을 때 사용
+        @keyframes name {
+            from {
+
+            }
+
+            to {
+
+            }
+        }
+
+        @keyframes name {
+            0% {
+
+            }
+
+            50% {
+
+            }
+
+            100% {
+                
+            }
+        }
+    > animation-name: 적용할 애니메이션 이름;
+    > animation-duration: 2000ms;
+    > animation-timing-fuction
+        > ease-in (처음 천천히 나중에 빨리)
+            / ease-out (처음 빨리 나중에 천천히)
+            / ease-in-out (짬뽕)
+            / cubic-bezier (속도를 제어하고 싶을때)
+            https://cubic-bezier.com/#.17,.67,.83,.67
+    > animation-delay
+    > animation-iteration-count 
+        > 되풀이 몇 번 할지 선언
+        > animation-iteration-count: 3; > 3 번 반복
+        > 정수 / infinite (무한대 반복)
+    > animation-direction
+        > reverse (to > from으로, 반대 방향) / alternate (from > to > from to ...번갈아서 하도록)
+
+box-shadow
+    > neomorphism 요새 유행? https://neumorphism.io/#e0e0e0
+    > h-offset / v-offset / blur / spread / color
+    > x +오른 -왼/ y +아래 -위/ 흐린정도 1px, 2px...0일때 뚜렷하다가 키울수록 흐려짐/ 그림자사이즈 / 색상
+    box-shadow: 0 10px 16px 0 rgba(255, 73, 73, 0.5);
+
+opacity
+    > 투명도
+    > 0 ~ 1
+
+overflow
+    > width와 height를 잡을 수 있는 요소의 내용이 오바해서 튀어나올때
+    > visible / auto / scroll / hidden
+
+transform
+    > translate() / scale() / rotate()
+    > transform: scale(1.25) translate(30px, 40px) rotate(45deg);
+        > 콤마 없이 공백으로 동시에 사용가능
+
+visiblity
+    > visible / hidden
+    > 만약 display: none;을 하거나 width나 height를 0으로 해준다면 없는 것으로 취급하나
+        visiblity: hidden;는 opacity가 0이 된 것 같이 적용됨
+
+Grid system
+    12 column 을 많이 씀 > 2, 3, 4, 6의 배수
+    container
+    column > 기준으로 요소의 사이즈를 잡음
+    gutter > 여백을 주고 싶을 때 (간격을 위한 여백)
+
+    > Bootstrap
+        > css 프레임워크
+        > 반응형 그리드 시스템이 인기있음
+        > link 넣으면 기본 스타일이 먹혀있음
+            > <div class="container">
+                    <div class="row">
+                        <div class="col-1">
+                            <-- 요소 -->
+                        </div>
+                    </div>            
+                </div>
+            > 항상 paddng이 각각 15px씩 먹혀있음 (총 30px이 먹혀있음)
+            > media query로 반응형이 만들어져 있음
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2"></div>
+                    점점 사이즈 커짐에 따라 break point에서 
+                    12 > 6 > 4 > 3 > 2로 구간별 반응형으로 크기가 바뀜
